@@ -19,7 +19,8 @@
     },
     "CHAT_ID": {
       "description": "Il CHAT_ID ottenuto precedentemente",
-      "value": ""
+      "value": "",
+      "required": "false"
     },
     "PATH": {
       "value": "/usr/local/bin:/usr/bin:/bin:/app/vendor/"
