@@ -1,7 +1,7 @@
 {
   "name": "postobot",
-  "description": "Un bot per prenotare le lezioni di Unige",
-  "website": "https://github.com/rcastellotti/postobot",
+  "description": "Un bot per prenotare le lezioni di UniGe",
+  "website": "https://github.com/fabifont/postobot",
   "addons": ["heroku-postgresql:hobby-dev"],
   "stack": "heroku-20",
   "env": {

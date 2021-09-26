@@ -1,7 +1,7 @@
 # postobot
 <span>
 
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)  ![](https://github.com/rcastellotti/postobot/actions/workflows/main.yml/badge.svg) ![](https://img.shields.io/docker/pulls/rcastellotti/postobot.svg)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)  ![](https://github.com/fabifont/postobot/actions/workflows/main.yml/badge.svg) ![](https://img.shields.io/docker/pulls/fabifont/postobot.svg)
 
 </span>
 
@@ -43,7 +43,7 @@ services:
       POSTGRES_PASSWORD: <POSTGRES_PASSWORD>
 
   bot:
-    image: rcastellotti/postobot:latest
+    image: fabifont/postobot:latest
     environment:
       BOT_TOKEN: <BOT_TOKEN>
       CHAT_ID: <CHAT_ID>
@@ -57,15 +57,15 @@ services:
 
 Puoi deployare e configurare `postobot` su [Heroku](https://heroku.com) usando questo button:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/rcastellotti/postobot/tree/heroku)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/fabifont/postobot/tree/heroku)
 
 ### Technical Stuff
 
 La variabile d' ambiente `GECKODRIVER_PATH` e' necessaria per utilizzare il [buildpack](https://devcenter.heroku.com/articles/buildpacks) [heroku-integrated-firefox-geckodriver](https://elements.heroku.com/buildpacks/pyronlaboratory/heroku-integrated-firefox-geckodriver)
 
-La Github Action [`heroku.yml`](https://github.com/rcastellotti/postobot/blob/main/.github/workflows/heroku.yml) aggiorna ad ogni commit il [subtree](https://www.atlassian.com/git/tutorials/git-subtree) [heroku](https://github.com/rcastellotti/postobot/tree/heroku) necessario per un funzionamento corretto di Heroku (`app.json`,`Procfile` e `requirements.txt` devono necessariamente essere nella basedir).
+La Github Action [`heroku.yml`](https://github.com/fabifont/postobot/blob/main/.github/workflows/heroku.yml) aggiorna ad ogni commit il [subtree](https://www.atlassian.com/git/tutorials/git-subtree) [heroku](https://github.com/fabifont/postobot/tree/heroku) necessario per un funzionamento corretto di Heroku (`app.json`,`Procfile` e `requirements.txt` devono necessariamente essere nella basedir).
 
-La Github Action [`main.yml`](https://github.com/rcastellotti/postobot/blob/main/.github/workflows/main.yml) builda l' immagine docker e la pusha in automatico su [DockerHub](https://hub.docker.com/rcastellotti/postobot).
+La Github Action [`main.yml`](https://github.com/fabifont/postobot/blob/main/.github/workflows/main.yml) builda l' immagine docker e la pusha in automatico su [DockerHub](https://hub.docker.com/fabifont/postobot).
 
 Dal momento che il bot per funzionare ha bisogno di matricola e password in chiaro (devono essere inserite da [Selenium](https://selenium.dev) ) abbiamo deciso di non hostarne uno e dare la possibilita' di registrarsi per garantire maggiore privacy e sicurezza, deployare il bot dovrebbe essere un processo semplice, in caso di problemi  apri un issue e proveremo ad aiutarti.
 
