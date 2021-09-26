@@ -67,7 +67,7 @@ La Github Action [`heroku.yml`](https://github.com/fabifont/postobot/blob/main/.
 
 La Github Action [`main.yml`](https://github.com/fabifont/postobot/blob/main/.github/workflows/main.yml) builda l' immagine docker e la pusha in automatico su [DockerHub](https://hub.docker.com/fabifont/postobot).
 
-Dal momento che il bot per funzionare ha bisogno di matricola e password in chiaro (devono essere inserite da [Selenium](https://selenium.dev) ) abbiamo deciso di non hostarne uno e dare la possibilita' di registrarsi per garantire maggiore privacy e sicurezza, deployare il bot dovrebbe essere un processo semplice, in caso di problemi  apri un issue e proveremo ad aiutarti.
+Dal momento che il bot per funzionare ha bisogno di matricola e password in chiaro (devono essere inserite da [Selenium](https://selenium.dev)) abbiamo deciso di non hostarne uno e dare la possibilita' di registrarsi per garantire maggiore privacy e sicurezza, deployare il bot dovrebbe essere un processo semplice, in caso di problemi  apri un issue e proveremo ad aiutarti.
 
 
 ## Altri atenei
