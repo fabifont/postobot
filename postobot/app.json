@@ -1,0 +1,54 @@
+{
+  "name": "postobot",
+  "description": "Un bot per prenotare le lezioni di Unige",
+  "website": "https://github.com/rcastellotti/postobot",
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "stack": "heroku-20",
+  "env": {
+    "MATRICOLA": {
+      "description": "La tua matricola",
+      "value": ""
+    },
+    "PASSWORD": {
+      "description": "La tua password",
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "Il BOT_TOKEN ottenuto precedentemente",
+      "value": ""
+    },
+    "CHAT_ID": {
+      "description": "Il CHAT_ID ottenuto precedentemente",
+      "value": ""
+    },
+    "PATH": {
+      "value": "/usr/local/bin:/usr/bin:/bin:/app/vendor/"
+    },
+    "LD_LIBRARY_PATH": {
+      "value": "/usr/local/lib:/usr/lib:/lib:/app/vendor"
+    },
+    "FIREFOX_BIN": {
+      "value": "/app/vendor/firefox/firefox"
+    },
+    "GECKODRIVER_PATH": {
+      "value": "/app/vendor/geckodriver/geckodriver"
+    }
+  },
+  "scripts": {
+    "postdeploy": "alembic upgrade head"
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/pyronlaboratory/heroku-integrated-firefox-geckodriver"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}

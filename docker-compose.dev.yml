@@ -1,0 +1,22 @@
+version: "3.1"
+services:
+  db:
+    image: postgres:alpine
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: rc
+      POSTGRES_DB: postobot
+      POSTGRES_PASSWORD: ilovebears
+
+  bot:
+    image: postobot_dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sh -c "alembic upgrade head && python3 main.py"
+    env_file:
+      - .env
+    depends_on:
+      - db

@@ -1,0 +1,8 @@
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          git push origin `git subtree split --prefix postobot main`:heroku --force
