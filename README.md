@@ -18,7 +18,6 @@
   ```
 + \[Opzionale\]:Configura la bot description con `/mybots -> scegli il tuo bot -> edit bot -> edit description`:
   ```
-  Questo bot permette di prenotare i posti a lezione per i corsi di UniGe.
   /prenota prenota una lezione tra quelle disponibili.
   /prenotate ottieni il QR di una lezione tra quelle prenotate.
   /cancella cancella una lezione tra quelle prenotate.
